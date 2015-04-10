@@ -1,5 +1,6 @@
 package com.example.johnnysung.jkcanvasrender;
 
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.support.v7.app.ActionBarActivity;
@@ -13,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -71,24 +75,54 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Bitmap bitmap;
+        String filename;
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sb = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_clear:
+                lines.clear();
+                canvas_view.invalidate();
+                break;
+            case R.id.action_save_jpg:
+                try {
+                    filename = String.format("%s.jpg", sb.format(cal.getTime()));
+                    bitmap = ViewUtils.getViewBitmap(canvas_view, Color.WHITE);
+                    BitmapUtils.saveAsJPG(this, bitmap, filename);
+
+                    canvas_view.invalidate();
+                    canvas_view.setOnTouchListener(this);
+                    Toast.makeText(this, String.format("Image saved as: %s", filename), Toast.LENGTH_SHORT).show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.action_save_png:
+                try {
+                    filename = String.format("%s.png", sb.format(cal.getTime()));
+
+                    bitmap = ViewUtils.getViewBitmap(canvas_view, Color.TRANSPARENT);
+                    BitmapUtils.saveAsPNG(this, bitmap, filename);
+
+                    canvas_view.invalidate();
+                    canvas_view.setOnTouchListener(this);
+                    Toast.makeText(this, String.format("Image saved as: %s", filename), Toast.LENGTH_SHORT).show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     @Override
     public void onClick(View v) {
         if (v.getTag() != null) {
             String colorStr = String.valueOf(v.getTag());
-
             currentColor = Color.parseColor(colorStr);
             Toast.makeText(this, "Selected " + colorStr, Toast.LENGTH_SHORT).show();
         }

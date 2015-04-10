@@ -36,6 +36,8 @@ public class MyCanvasView extends View {
     private void init() {
         // 創建畫筆
         p = new Paint(Paint.ANTI_ALIAS_FLAG);
+        p.setStrokeCap(Paint.Cap.ROUND);
+        p.setStrokeJoin(Paint.Join.ROUND);
         p.setColor(Color.RED);// 設置紅色
         p.setStrokeWidth(5);
     }
@@ -61,8 +63,4 @@ public class MyCanvasView extends View {
             }
         }
     }
-}
-
-interface MyCanvasViewDataSource {
-    public ArrayList<Line> getCanvasViewLines();
 }
