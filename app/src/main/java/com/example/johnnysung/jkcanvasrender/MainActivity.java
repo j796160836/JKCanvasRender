@@ -1,9 +1,7 @@
 package com.example.johnnysung.jkcanvasrender;
 
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PointF;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,7 +29,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     MyCanvasView canvas_view;
 
     private ArrayList<Line> lines;
-    private int currenColor = Color.BLUE;
+    private int currentColor = Color.BLUE;
     private PointF lastPoint;
 
     @Override
@@ -91,7 +89,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         if (v.getTag() != null) {
             String colorStr = String.valueOf(v.getTag());
 
-            currenColor = Color.parseColor(colorStr);
+            currentColor = Color.parseColor(colorStr);
             Toast.makeText(this, "Selected " + colorStr, Toast.LENGTH_SHORT).show();
         }
     }
@@ -112,12 +110,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             case MotionEvent.ACTION_DOWN:
                 act = "DOWN";
-                lines.add(new Line(Color.BLUE));
+                lines.add(new Line(currentColor));
                 lastPoint = new PointF(x, y);
                 break;
             case MotionEvent.ACTION_MOVE:
                 act = "MOVE";
-                if (!(Math.abs(lastPoint.x - x) > 1 || Math.abs(lastPoint.y - y) > 1)) {
+                if (!(Math.abs(lastPoint.x - x) > 3 || Math.abs(lastPoint.y - y) > 3)) {
                     return true;
                 }
                 break;
