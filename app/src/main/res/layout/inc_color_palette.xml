@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="#cc000000"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/color_btn_ffffff"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:tag="#ffffff" />
+
+        <View
+            android:id="@+id/color_btn_c3c3c3"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#C3C3C3" />
+
+        <View
+            android:id="@+id/color_btn_c57a5b"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#C57A5B" />
+
+        <View
+            android:id="@+id/color_btn_ffadc9"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#FFADC9" />
+
+        <View
+            android:id="@+id/color_btn_ffc93d"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#FFC93D" />
+
+        <View
+            android:id="@+id/color_btn_f4e5b4"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#F4E5B4" />
+
+        <View
+            android:id="@+id/color_btn_ade845"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#ADE845" />
+
+        <View
+            android:id="@+id/color_btn_82d9e9"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#82D9E9" />
+
+        <View
+            android:id="@+id/color_btn_6191bc"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#6191BC" />
+
+        <View
+            android:id="@+id/color_btn_c8bee5"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#C8BEE5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_margin="@dimen/color_palette_margin"
+            android:id="@+id/color_btn_000000"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#000000" />
+
+        <View
+            android:id="@+id/color_btn_7f7f7f"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#7f7f7f" />
+
+        <View
+            android:id="@+id/color_btn_960018"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#960018" />
+
+        <View
+            android:id="@+id/color_btn_ff072e"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#ff072e" />
+
+        <View
+            android:id="@+id/color_btn_ff7d3a"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#ff7d3a" />
+
+        <View
+            android:id="@+id/color_btn_fff445"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#fff445" />
+
+        <View
+            android:id="@+id/color_btn_00b255"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#00b255" />
+
+        <View
+            android:id="@+id/color_btn_00a2e3"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#00a2e3" />
+
+        <View
+            android:id="@+id/color_btn_2745c7"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_margin="@dimen/color_palette_margin"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#2745c7" />
+
+        <View
+            android:layout_margin="@dimen/color_palette_margin"
+            android:id="@+id/color_btn_ad45a0"
+            android:layout_width="@dimen/color_palette_size"
+            android:layout_height="@dimen/color_palette_size"
+            android:tag="#ad45a0" />
+
+    </LinearLayout>
+</LinearLayout>
